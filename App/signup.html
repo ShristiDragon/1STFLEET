@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form with Input Validation</title>
+  <style>
+    .form {
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      text-align: center;
+      background-color: black;
+      color: white;
+      padding-left: 30px;
+      background-image: url('https://images.unsplash.com/photo-1562813733-b31f71025d54?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+    #thankYouMessage {
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+    }
+    button {
+      background-color: rgb(14, 65, 87);
+      border-radius: 20px;
+      width: 100px;
+      color: white;
+      margin: 30px;
+    }
+    .container-row {
+      font-size: larger;
+      padding-right: 40px;
+    }
+    .container-box {
+      color: chartreuse;
+      text-align: center;
+      width: 100%;
+      font-size: smaller;
+    }
+  </style>
+</head>
+<body>
+  <form id="myForm">   
+    <div class="container">
+      <div class="container-box">
+        <p>FLEETPANDA
+          <br><br>
+          FleetPanda: A Dispatch Software for Fuel Marketers.<br><br>
+          FleetPanda is a software company that specializes in providing dispatch solutions for fuel marketing companies. It's designed to streamline operations for businesses involved in various aspects of the fuel industry.
+        </p>
+      </div>
+      <div class="container-row">
+        <br>
+        <h2>WELCOME TO FLEETPANDA</h2>
+        ENTER YOUR DETAILS HERE TO SIGN-UP!<br>
+        <div><label for="name">Name:</label></div>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <div><label for="age">Age:</label></div>
+        <input type="number" id="age" name="age" required>
+        <br><br>
+        <div><label for="username">Username:</label></div>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <div><label for="password">Password:</label></div>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <div><label for="email">Email:</label></div>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <div><label for="rememberMe">
+          <input type="checkbox" id="rememberMe" name="rememberMe">REMEMBER ME</label>
+        </div>
+        <div class="button"><button type="submit"><h3>Submit</h3></button></div>
+        <div id="warning"></div>
+        <p id="thankYouMessage" class="hidden"></p>
+      </div>
+    </div>
+  </form>
+  <script src="scripts/signup.js"></script>
+</body>
+</html>
