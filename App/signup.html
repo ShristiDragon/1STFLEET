@@ -2,41 +2,7 @@
 <html>
 <head>
   <title>Form with Input Validation</title>
-  <style>
-    .form {
-      text-align: center;
-    }
-    .container {
-      display: flex;
-      text-align: center;
-      background-color: black;
-      color: white;
-      padding-left: 30px;
-      background-image: url('https://images.unsplash.com/photo-1562813733-b31f71025d54?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    }
-    #thankYouMessage {
-      margin-top: 20px;
-      color: green;
-      font-weight: bold;
-    }
-    button {
-      background-color: rgb(14, 65, 87);
-      border-radius: 20px;
-      width: 100px;
-      color: white;
-      margin: 30px;
-    }
-    .container-row {
-      font-size: larger;
-      padding-right: 40px;
-    }
-    .container-box {
-      color: chartreuse;
-      text-align: center;
-      width: 100%;
-      font-size: smaller;
-    }
-  </style>
+  <link rel="stylesheet" href="../App/css/signup.css">
 </head>
 <body>
   <form id="myForm">   
@@ -70,7 +36,7 @@
         <div><label for="rememberMe">
           <input type="checkbox" id="rememberMe" name="rememberMe">REMEMBER ME</label>
         </div>
-        <div class="button"><button type="submit"><h3>Submit</h3></button></div>
+        <div class="button"><button type="submit"><h4 >SIGN-UP</h4></button></div>
         <div id="warning"></div>
         <p id="thankYouMessage" class="hidden"></p>
       </div>

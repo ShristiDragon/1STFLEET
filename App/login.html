@@ -1,71 +1,38 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FleetPanda Login</title>
+    <link rel="stylesheet" href="../App/css/login.css">
 </head>
 <body>
-    <style>
-        .form
-        {
-            text-align:center;
-        }
-        .container{
-        display: flex;
-        text-align:center;
-        background-color: black;
-        color:white ;
-        padding-left: 30px;
-        background-image: url('https://images.unsplash.com/photo-1562813733-b31f71025d54?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-        }
-        #thankYouMessage {
-            margin-top: 20px;
-            color: green;
-            font-weight: bold; 
-        }
-        button {
-            background-color:rgb(14, 65, 87);
-            border-radius: 20px;
-            width:100px;
-            color: white;
-            margin: 30px;
-        }
-        .container-row
-        {
-            font-size:larger;
-            padding-right: 40px;
-        }
-        .container-box{
-            color:chartreuse;
-            text-align: center;
-            width:100%;
-            font-size: smaller;
-        }
-    </style>
-            <form>   
-            <div class="container">
-                <div class="container-box">
-                    <br><br>
-            <div class="container-row" id="myForm">
-            <br>
-            <h2>WELCOME TO FLEETPANDA</h2>
-            Log-in Here!<br><br>
-            <div><label for="name">Username:</label></div>
-            <input type="text" id="name" name="name" required>
-            <br><br>
-            <div><label for="email">Email:</label></div>
-            <input type="email" id="email" name="email" required>
-            <br><br>
-            <div><label for="name">Password:</label></div>
-            <input type="password" id="name" name="name" required>
-            <br><br>
-            <div><label for ="Remember me">
-            <input type="checkbox" id="Remember me" name="REMEMBER ">REMEMBER ME</label> </div>
-            <div class="button"><button type="submit"><h3>Submit</h3></button></div>
-            <div id="warning"></div>
-            <p id="thankYouMessage" class="hidden"></p>
-        </div></div></div></div>
-        </form>
-        <script src="scripts/login.js"></script>
-    </body>
+    <form id="loginForm" class="form">   
+        <div class="container">
+            <div class="container-box">
+                <h2>WELCOME TO FLEETPANDA</h2>
+                <p><h3>Log-in Here!</h3></p>
+                <div class="container-row">
+                    <label for="username">Email:</label>
+                    <input type="email" id="username" name="username" required>
+                </div>
+                <div class="container-row">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="container-row">
+                    <label for="rememberMe">
+                        <input type="checkbox" id="rememberMe" name="rememberMe"> REMEMBER ME
+                    </label>
+                </div>
+                <div class="button">
+                    <button type="submit">Login</button>
+                </div>
+                <div id="alertBox"></div>
+                <p id="thankYouMessage" class="hidden"></p>
+            </div>
+        </div>
+    </form>
+    <script src="../App/scripts/login.js"></script>
+</body>
 </html>

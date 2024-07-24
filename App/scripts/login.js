@@ -1,21 +1,43 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
-    const thankYouMessage = document.getElementById('thankYouMessage');
-    const warning = document.getElementById('warning');
+document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("loginForm");
+    const alertBox = document.getElementById("alertBox");
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        warning.textContent = '';
-        thankYouMessage.textContent = '';
-        
-        const username = document.getElementById('username').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const password = document.getElementById('password').value.trim();
+    if (loginForm) {
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-        if (!username || !email || !password) {
-            warning.textContent = 'Please fill out all fields.';
-            return;
-        }
-        thankYouMessage.textContent = 'Thank you for logging in!';
-    });
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const loginData = {
+                username: username,
+                password: password,
+            };
+
+            // Change this URL to your local server URL
+            fetch("https://reqres.in/api/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(loginData),
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.token) {
+                    alert("Login Successful");
+                    localStorage.setItem("isLoggedIn", "true");
+                    window.location.href = "../App/home.html";
+                } else {
+                    alertBox.innerHTML = "<p>Invalid username or password. Please try again.</p>";
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alertBox.innerHTML = "<p>An error occurred. Please try again later!</p>";
+            });
+        });
+    } else {
+        console.error("Login form not found.");
+    }
 });
