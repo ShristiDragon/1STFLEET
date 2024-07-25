@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 username: username,
                 password: password,
             };
-
-            // Change this URL to your local server URL
             fetch("https://reqres.in/api/login", {
                 method: "POST",
                 headers: {
@@ -27,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (data.token) {
                     alert("Login Successful");
                     localStorage.setItem("isLoggedIn", "true");
-                    window.location.href = "../App/home.html";
+                   console.log(loginData)
+
                 } else {
                     alertBox.innerHTML = "<p>Invalid username or password. Please try again.</p>";
                 }

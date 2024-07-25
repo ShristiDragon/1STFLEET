@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.container-box {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(151, 43, 43, 0.1);
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+}
+.form-container {
+    background-color:white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+.submit {
+    flex: 1;
+    text-align: center;
+}
+form {
+    background-color:blanchedalmond;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+form div {
+    margin-bottom: 15px;
+}
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30px;
+}
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.2px;
+    position: fixed;
+    bottom: 1px;
+    width: 100%;
+}
+.image-container {
+    position: relative;
+}
+.image-container img {
+    width: 100%;
+}
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.center {
+position: absolute;
+top: 1%;
+left: 1%;
+background-color: transparent;
+color: white;
+padding-left: 1%;
+padding-right: 1%;
+text-align: justify;
+}
